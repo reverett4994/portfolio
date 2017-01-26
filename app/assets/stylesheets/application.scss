@@ -1,0 +1,48 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+#project_title{
+  display: inline-block;
+  font-size: 40px;
+  margin-right: 50px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+.preview_pic{
+  width: 620px;
+
+}
+#project_text{
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+.project_div{
+    padding-top: 10px;
+
+}
+@media (min-width: 1200px) {
+  .project_div {
+    width: 1200px;
+  }
+}
