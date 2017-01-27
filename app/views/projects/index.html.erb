@@ -1,31 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Projects</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Link</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= project.link %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1 id="listing_page_header">My Projects Listed by Most Recent</h1><hr>
 
 <br>
-
+<% @projects.each do |project| %>
+  <%= link_to project do %>
+    <div class="listing">
+      <h3 class="sliding-u-l-r-l"><%=project.title%></h3><br>
+      <%= image_tag project.image.url,class:"listing_pic d-flex ml-3" %>
+      <p><%= truncate(project.description, :length => 150)%></p>
+    </div>
+  <%end%>
+<% end %>
 <%= link_to 'New Project', new_project_path %>

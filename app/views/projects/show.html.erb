@@ -2,14 +2,13 @@
     <div id="project_title">
       <%= @project.title %>
     </div>
-    <%= image_tag @project.image.url,class:"preview_pic" %>
+    <%=link_to(image_tag( @project.image.url, :class=>"preview_pic"),@project.link) %>
     <hr>
   <div id="project_text">
     <p>
       <%= @project.description %>
     </p>
-      <%= link_to 'Link', @project.link %>
-      <br>
+      <%= link_to 'Website Link', @project.link %> | 
       <%= link_to 'GitHub Link', @project.github_link %>
       <br>
     <%= link_to 'Edit', edit_project_path(@project) %> |

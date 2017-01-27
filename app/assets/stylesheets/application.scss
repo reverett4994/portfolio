@@ -20,6 +20,10 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+
+
+ /*******************************************PROJECT SHOW******************************************************/
+
 #project_title{
   display: inline-block;
   font-size: 40px;
@@ -30,7 +34,6 @@
 }
 .preview_pic{
   width: 620px;
-
 }
 #project_text{
   display: block;
@@ -46,3 +49,105 @@
     width: 1200px;
   }
 }
+/*******************************************PROJECT SHOW******************************************************/
+
+
+
+
+
+
+/*******************************************PROJECT INDEX******************************************************/
+
+#listing_page_header{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 40px;
+}
+.listing{
+  width: 75%;
+  max-width: 1430px;
+  padding: 20px;
+  border-bottom: .5px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  color: black;
+}
+a{
+  text-decoration: none;
+}
+ a:hover{
+    text-decoration: none;
+  }
+.listing h3{
+  display: inline;
+  font-family: 'Montserrat', sans-serif;
+}
+.listing p{
+  max-width: 50%;
+  display: inline-block;
+  margin-top: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+.listing_pic{
+  width: 150px;
+  display: inline-block;
+  float: right;
+  margin-top: -20px;
+}
+
+
+.sliding-u-l-r-l {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+.sliding-u-l-r-l:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    transition: width 0s ease, background .5s ease;
+}
+.sliding-u-l-r-l:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #666;
+    transition: width .5s ease;
+}
+.listing:hover .sliding-u-l-r-l:before {
+    width: 100%;
+    background: #666;
+    transition: width .5s ease;
+}
+.listing:hover .sliding-u-l-r-l:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+
+@media only screen and (max-width: 920px) {
+    .listing{
+      width: 100%;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .listing_pic{
+      display: block;
+      float: none;
+      margin-top: 5px;
+    }
+}
+
+
+/*******************************************PROJECT INDEX******************************************************/
