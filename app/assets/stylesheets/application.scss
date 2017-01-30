@@ -20,16 +20,99 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ /******************************************* HOME ******************************************************/
+
+#home_header{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 45px;
+  max-width: 24em;
+  letter-spacing: 2px;
+  line-height: 140%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+}
+
+#home_header_2{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 32px;
+  width: 100%;
+  letter-spacing: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 20px 0 20px 0;
+  margin-bottom: 0;
+}
+
+.box{
+  height: 404px;
+  width: 33%;
+  float: left;
+  margin-top: 0;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 40px;
+  hr{
+    width: 30%;
+    border-top: 1px solid #bfbfbf;
+  }
+}
+.box:first-of-type{
+
+}
+.box:nth-of-type(2){
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+}
+.box:nth-of-type(3){
+
+}
+
+.home_image{
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.third{
+  margin-top: -15px;
+  margin-bottom: -15px;
+  width: 36%;
+}
+
+.box_header{
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+
+
+ /******************************************* HOME ******************************************************/
 
 
  /*******************************************PROJECT SHOW******************************************************/
-
+#page_effect{
+  display: none;
+}
 #project_title{
   display: inline-block;
   font-size: 40px;
   margin-right: 50px;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+#project_title_2{
+  font-size: 32px;
+  margin-right: 50px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
   border-bottom: 1px solid black;
 }
 .preview_pic{

@@ -1,17 +1,28 @@
-<div class="container project_div">
+<div id="page_effect" class="container project_div">
     <div id="project_title">
       <%= @project.title %>
     </div>
     <%=link_to(image_tag( @project.image.url, :class=>"preview_pic"),@project.link) %>
-    <hr>
   <div id="project_text">
     <p>
+      <div id="project_title_2">
+        <p>App Description</p>
+      </div>
       <%= @project.description %>
     </p>
-      <%= link_to 'Website Link', @project.link %> | 
+      <%= link_to 'Website Link', @project.link %> |
       <%= link_to 'GitHub Link', @project.github_link %>
       <br>
     <%= link_to 'Edit', edit_project_path(@project) %> |
     <%= link_to 'Back', projects_path %>
   </div>
 </div>
+
+
+<script>
+
+$(document).ready(function(){
+	$('#page_effect').fadeIn(1000);
+});
+
+</script>
