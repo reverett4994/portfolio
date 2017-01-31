@@ -13,12 +13,52 @@
     font-family: 'Open Sans', sans-serif;
 
     font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Dosis', sans-serif;
+
+
  *
  *= require_tree .
+ *= require sweetalert
  *= require_self
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ html,
+ body {
+     margin:0;
+     padding:0;
+     height:100%;
+ }
+ #container {
+     min-height:100%;
+     position:relative;
+}
+ #footer {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   padding: 1rem;
+   background-color: #efefef;
+   text-align: center;
+   border-top: 1px solid #d9d9d9;
+ }
+ #footer_text{
+   font-family: 'Open Sans', sans-serif;
+   a{
+     margin-left: 10px;
+     text-decoration: none;
+     color: black;
+     img{
+       opacity: .6;
+     }
+   }
+   a:hover img{
+     opacity: 1;
+   }
+ }
 
  /******************************************* HOME ******************************************************/
 
@@ -91,8 +131,11 @@
   font-size: 21px;
   letter-spacing: 1px;
 }
-
-
+.box_info{
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
  /******************************************* HOME ******************************************************/
 
 
@@ -234,3 +277,16 @@ a{
 
 
 /*******************************************PROJECT INDEX******************************************************/
+
+
+
+/******************************************* CONTACT ******************************************************/
+
+.message_area{
+  min-height: 300px;
+  max-width: 100%;
+}
+.return_area{
+  max-width: 100%;
+}
+/******************************************* CONTACT ******************************************************/

@@ -62,6 +62,20 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def contact
+
+  end
+
+  def send_mail
+    @message=params[:message]
+    @from=params[:from]
+    ProjectMailer.contact_mail(@message,@from).deliver
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: "Your message was sent! I'll try to respond as soon as possible" }
+      format.json { head :no_content }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project

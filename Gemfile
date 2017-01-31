@@ -54,3 +54,5 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap_form'
 
 gem 'high_voltage', '~> 3.0.0'
+
+gem 'sweetalert-rails'

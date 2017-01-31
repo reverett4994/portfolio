@@ -3,25 +3,31 @@
 <head>
   <title>Portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,600" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">SAMBLE HEADER</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home https://snook.ca/archives/javascript/jquery-bg-image-animations/</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
-      </ul>
+  <div id="wrapper">
+    <div id="header">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">SAMBLE HEADER</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">https://snook.ca/archives/javascript/jquery-bg-image-animations/</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </nav>
-<%= yield %>
+    <div id="body"><%= yield %></div>
 
+  </div>
 </body>
 </html>

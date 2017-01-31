@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Send Me a Message</h1>
+  <div id="contact_form">
+    <%= bootstrap_form_tag(url: '/send-mail', layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10") do |f| %>
+      <div class="form-group">
+        <%= f.text_area :message, class:"message_area",data: { validation: 'length',validation_length:"min1",validation_help:"Message to Me"}, label: "Your Message*"  %>
+      </div>
+      <div class="form-group">
+        <%= f.text_area :from, class:"return_area",data: {validation_help:"optional email for me to reply to"}, label: "Return Email"  %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Send" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div id="footer">
+  <div id="footer_text">Find me on: <%=link_to image_tag("linkedin-logo.png")+" Linkdin", "https://www.linkedin.com/"%> <%=link_to image_tag("github-sign.png")+" GitHub", "https://github.com/reverett4994?tab=repositories"%>  	&nbsp;and <a href="mailto:reverett4994@gmail.com">reverett4994@gmail.com</a></div>
+</div>
+<script>
+$.validate({
+  lang: 'en',
+  modules : 'security',
+  onSuccess : function($form) {
+
+  },
+  onError : function($form) {
+    sweetAlert("Opps!", "Something Was Wrong", "warning");
+    return false; // IF FALSE Will stop the submission of the form
+  }
+});
+</script>
