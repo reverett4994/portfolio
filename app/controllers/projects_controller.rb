@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
+    @counter=0
     @projects = Project.all
     @projects=@projects.reverse
   end

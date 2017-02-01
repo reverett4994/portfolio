@@ -1,15 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div id="header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/projects">Projects</a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-<h1 id="listing_page_header">My Projects Listed by Most Recent</h1><hr>
+<h1 id="listing_page_header">My Projects by Most Recent</h1><hr>
 
 <br>
 <% @projects.each do |project| %>
-  <%= link_to project do %>
-    <div class="listing">
-      <h3 class="sliding-u-l-r-l"><%=project.title%></h3><br>
-      <%= image_tag project.image.url,class:"listing_pic d-flex ml-3" %>
-      <p><%= truncate(project.description, :length => 150)%></p>
-    </div>
+  <%if @counter.even?%>
+    <%= link_to project do %>
+      <div class="listing animated bounceInLeft">
+        <h3 class="sliding-u-l-r-l"><%=project.title%></h3><br>
+        <%= image_tag project.image.url,class:"listing_pic d-flex ml-3" %>
+        <p><%= truncate(project.description, :length => 150)%></p>
+      </div>
+    <%end%>
+  <%else%>
+    <%= link_to project do %>
+      <div class="listing animated bounceInRight">
+        <h3 class="sliding-u-l-r-l"><%=project.title%></h3><br>
+        <%= image_tag project.image.url,class:"listing_pic d-flex ml-3" %>
+        <p><%= truncate(project.description, :length => 150)%></p>
+      </div>
+    <%end%>
   <%end%>
+  <%@counter+=1%>
 <% end %>
-<%= link_to 'New Project', new_project_path %>

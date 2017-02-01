@@ -1,30 +1,40 @@
+<div id="header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="/projects">Projects</a></li>
+        <li class="active"><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
 <% flash.each do |key, value| %>
   <div class="<%= flash_class(key) %>">
     <%= value %>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   </div>
 <% end %>
-<h1 id="home_header">Hi, I'm Ryan Everett, an Aspiring Full Stack Web Developer Using Ruby on Rails to Create Dynamic Websites</h1>
+<h1 id="home_header"class="animated bounceInDown">Hi, I'm Ryan Everett, an Aspiring Full Stack Web Developer Using Ruby on Rails to Create Dynamic Websites</h1>
 
-<h2 id="home_header_2">I'm Experienced In</h2>
-<div class="box"><%=image_tag("html.png",class:"home_image")%>
-  <p class="box_header">Front-End Design</p>
-  <hr>
-  <p class="box_info">Using HTML, CSS, JavaScript and Twitter Bootstrap I've created many responsive and helpful designs, While using JQuery to dynamicly update webpages with information from databases and APIs.</p>
-</div>
+<h2 id="home_header_2" class="animated bounceIn">I'm Experienced In</h2>
+<div id="boxs">
+  <div class="box animated bounceInLeft" ><%=image_tag("html.png",class:"home_image")%>
+    <p class="box_header">Front-End Design</p>
+    <hr>
+    <p class="box_info">Using HTML, CSS, JavaScript and Twitter Bootstrap I've created many responsive and helpful designs, While using JQuery to dynamicly update webpages with information from databases and APIs.</p>
+  </div>
 
-<div class="box"><%=image_tag("database.png",class:"home_image")%>
-  <p class="box_header">Back-End Logic </p>
-  <hr>
-  <p class="box_info">I have handled user verification, payment transactions, databases and more using Ruby on Rails and MySQL, While maintaining my code though GitHub and hosting sites though Heroku. </p>
-</div>
+  <div class="box animated bounceInUp"><%=image_tag("database.png",class:"home_image")%>
+    <p class="box_header">Back-End Logic </p>
+    <hr>
+    <p class="box_info">I have handled user verification, payment transactions, databases and more using Ruby on Rails and MySQL, While maintaining my code though GitHub and hosting sites though Heroku. </p>
+  </div>
 
-<div class="box"><%=image_tag("browser.png",class:"home_image third")%>
-  <p class="box_header">Real-World Applications</p>
-  <hr>
-  <p class="box_info">All my current projects and sites can be seen <%=link_to "here",projects_path %>, all of which have separate GitHub repositories that can be found at my <a href="https://github.com/reverett4994?tab=repositories">GitHub page</a> . All hosted sites are though Heroku using a free account so may experience a couple of seconds of loading before first visit. </p>
-</div>
-
-<div id="footer">
-  <div id="footer_text">Find me on: <%=link_to image_tag("linkedin-logo.png")+" Linkdin", "https://www.linkedin.com/"%> <%=link_to image_tag("github-sign.png")+" GitHub", "https://github.com/reverett4994?tab=repositories"%>  	&nbsp;and <a href="mailto:reverett4994@gmail.com">reverett4994@gmail.com</a></div>
+  <div class="box animated bounceInRight"><%=image_tag("browser.png",class:"home_image third")%>
+    <p class="box_header">Real-World Applications</p>
+    <hr>
+    <p class="box_info">All my current projects and sites can be seen <%=link_to "here",projects_path %>, all of which have separate GitHub repositories that can be found at my <a href="https://github.com/reverett4994?tab=repositories">GitHub page</a> . All hosted sites are though Heroku using a free account so may experience a couple of seconds of loading before first visit. </p>
+  </div>
 </div>

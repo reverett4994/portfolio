@@ -1,28 +1,30 @@
-<div id="page_effect" class="container project_div">
-    <div id="project_title">
-      <%= @project.title %>
+<div id="header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
     </div>
-    <%=link_to(image_tag( @project.image.url, :class=>"preview_pic"),@project.link) %>
-  <div id="project_text">
-    <p>
-      <div id="project_title_2">
-        <p>App Description</p>
-      </div>
-      <%= @project.description %>
-    </p>
-      <%= link_to 'Website Link', @project.link %> |
-      <%= link_to 'GitHub Link', @project.github_link %>
-      <br>
-    <%= link_to 'Edit', edit_project_path(@project) %> |
-    <%= link_to 'Back', projects_path %>
-  </div>
+  </nav>
 </div>
 
-
-<script>
-
-$(document).ready(function(){
-	$('#page_effect').fadeIn(1000);
-});
-
-</script>
+<div id="page_effect" class="container project_div">
+    <div id="project_title"class="animated bounceInLeft">
+      <%= @project.title %>
+    </div>
+    <%=link_to(image_tag( @project.image.url, :class=>"preview_pic animated bounceInRight"),@project.link) %>
+  <div id="project_text">
+    <p>
+      <div id="project_title_2"class="animated bounceIn">
+        <p>App Description</p>
+      </div>
+      <div class="animated bounceInUp"><%= @project.description %></div>
+    </p>
+    <div class="animated bounceInUp">
+      <%= link_to 'Website Link', @project.link %> |
+      <%= link_to 'GitHub Link', @project.github_link %>
+    </div>
+  </div>
+</div>

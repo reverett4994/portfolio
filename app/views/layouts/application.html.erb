@@ -11,23 +11,20 @@
 </head>
 <body>
   <div id="wrapper">
-    <div id="header">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="/">SAMBLE HEADER</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">https://snook.ca/archives/javascript/jquery-bg-image-animations/</a></li>
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+
     <div id="body"><%= yield %></div>
 
   </div>
+  <div id="footer">
+    <div id="footer_text">Find me on: <%=link_to image_tag("linkedin-logo.png")+" Linkdin", "https://www.linkedin.com/in/ryan-everett-9b60a2136"%> <%=link_to image_tag("github-sign.png")+" GitHub", "https://github.com/reverett4994?tab=repositories"%>  	&nbsp;and <a href="mailto:reverett4994@gmail.com">reverett4994@gmail.com</a></div>
+  </div>
 </body>
 </html>
+<script>
+  $(".navbar-nav li").hover(function(){
+    $(this).addClass("animated infinite jello");
+    console.log("hovered");
+    },function(){
+      $(this).removeClass("animated infinite jello");
+  })
+</script>

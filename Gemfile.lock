@@ -36,6 +36,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    animate-rails (1.0.10)
+      rails
     arel (6.0.4)
     aws-sdk (2.5.3)
       aws-sdk-resources (= 2.5.3)
@@ -168,6 +170,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  animate-rails
   aws-sdk (~> 2)
   bootstrap-sass (~> 3.2.0)
   bootstrap_form

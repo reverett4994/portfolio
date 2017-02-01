@@ -56,3 +56,5 @@ gem 'bootstrap_form'
 gem 'high_voltage', '~> 3.0.0'
 
 gem 'sweetalert-rails'
+
+gem "animate-rails"
