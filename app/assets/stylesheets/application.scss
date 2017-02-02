@@ -58,7 +58,7 @@
 
  #footer {
    clear: both;
-   height: 45px;
+   height: 50px;
    right: 0;
    bottom: 0;
    left: 0;
@@ -67,6 +67,11 @@
    text-align: center;
    border-top: 1px solid #d9d9d9;
  }
+ @media only screen and (max-width: 285px) {
+    #footer{
+      height: 75px;
+    }
+}
  #footer_text{
    font-family: 'Open Sans', sans-serif;
    a{
@@ -307,6 +312,9 @@ a{
 @media only screen and (max-width: 920px) {
     .listing{
       width: 100%;
+      p{
+        max-width: 75%;
+      }
     }
 }
 @media only screen and (max-width: 460px) {
@@ -314,6 +322,9 @@ a{
       display: block;
       float: none;
       margin-top: 5px;
+    }
+    .listing p{
+      max-width: 100%;
     }
 }
 
