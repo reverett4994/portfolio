@@ -8,7 +8,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-  <%= render partial: "partials/google_analytics" %>
+  <%= render partial: "g_analytics" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -20,7 +20,7 @@
   <div id="footer">
     <div id="footer_text">Find me on: <%=link_to image_tag("linkedin-logo.png")+" Linkdin", "https://www.linkedin.com/in/ryan-everett-9b60a2136"%> <%=link_to image_tag("github-sign.png")+" GitHub", "https://github.com/reverett4994?tab=repositories"%>  	&nbsp;and <a href="mailto:reverett4994@gmail.com">reverett4994@gmail.com</a></div>
   </div>
-  <%= render partial: "partials/google_analytics_pageview" %>
+  <%= render partial: "ganalytics_pageview" %>
 </body>
 </html>
 <script>
