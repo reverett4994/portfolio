@@ -60,3 +60,5 @@ gem 'sweetalert-rails'
 gem "animate-rails"
 
 gem 'rails_12factor', group: :production
+
+gem 'dynopoker'
