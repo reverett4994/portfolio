@@ -16,7 +16,7 @@
 <% @projects.each do |project| %>
   <%if @counter.even?%>
     <%= link_to project do %>
-      <div class="listing animated bounceInLeft">
+      <div class="listing animated fadeInLeftBig">
         <h3 class="sliding-u-l-r-l"><%=project.title%></h3><br>
         <%= image_tag project.image.url,class:"listing_pic d-flex ml-3" %>
         <p><%= truncate(project.description, :length => 150)%></p>
@@ -24,7 +24,7 @@
     <%end%>
   <%else%>
     <%= link_to project do %>
-      <div class="listing animated bounceInRight">
+      <div class="listing animated fadeInRightBig">
         <h3 class="sliding-u-l-r-l"><%=project.title%></h3><br>
         <%= image_tag project.image.url,class:"listing_pic d-flex ml-3" %>
         <p><%= truncate(project.description, :length => 150)%></p>
