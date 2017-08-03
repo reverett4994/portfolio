@@ -12,6 +12,31 @@
 
 <h1 id="listing_page_header">My Projects by Most Recent</h1><hr>
 
+<div class="listing animated fadeInLeftBig">
+  <h3 id='h3_live' class="sliding-u-l-r-l">Live Websites</h3><br>
+</div>
+
+<%= link_to @wallpaper do %>
+  <div class="listing animated fadeInLeftBig">
+    <h3 class="sliding-u-l-r-l"><%=@wallpaper.title%></h3><br>
+    <%= image_tag @wallpaper.image.url,class:"listing_pic d-flex ml-3" %>
+    <p><%= truncate(@wallpaper.description, :length => 150)%></p>
+  </div>
+<%end%>
+
+<%= link_to @bug do %>
+  <div class="listing animated fadeInLeftBig">
+    <h3 class="sliding-u-l-r-l"><%=@bug.title%></h3><br>
+    <%= image_tag @bug.image.url,class:"listing_pic d-flex ml-3" %>
+    <p><%= truncate(@bug.description, :length => 150)%></p>
+  </div>
+<%end%>
+
+
+<div class="listing animated fadeInLeftBig">
+  <h3 id='h3_live' class="sliding-u-l-r-l">Concepts and Projects</h3><br>
+</div>
+
 <br>
 <% @projects.each do |project| %>
   <%if @counter.even?%>

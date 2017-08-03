@@ -7,6 +7,10 @@ class ProjectsController < ApplicationController
     @counter=0
     @projects = Project.all
     @projects=@projects.reverse
+    @projects.delete(Project.find(10))
+    @projects.delete(Project.find(14))
+    @wallpaper=Project.find(10)
+    @bug=Project.find(14)
   end
 
   # GET /projects/1
