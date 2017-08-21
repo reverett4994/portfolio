@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :projects, :only => [:show, :index]
+  resources :projects,param: :title
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
       get '/contact'=> 'projects#contact'
       post '/send-mail' => 'projects#send_mail'
+      get '/projects/:title' => 'projects#show'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

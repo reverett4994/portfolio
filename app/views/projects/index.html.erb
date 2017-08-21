@@ -1,3 +1,5 @@
+<% @title= "Sites and Projects from Ryan Everett a web developer from New Jersey" %>
+<meta name="description" content="A list of site and projects created by Ryan Everett a web deleoper that uses ruby on rails to create dynamic websites.">
 <div id="header">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -16,7 +18,7 @@
   <h3 id='h3_live' class="sliding-u-l-r-l">Live Websites</h3><br>
 </div>
 
-<%= link_to @wallpaper do %>
+<%= link_to "/projects/#{@wallpaper.title}" do %>
   <div class="listing animated fadeInLeftBig">
     <h3 class="sliding-u-l-r-l"><%=@wallpaper.title%></h3><br>
     <%= image_tag @wallpaper.image.url,class:"listing_pic d-flex ml-3" %>
@@ -24,7 +26,7 @@
   </div>
 <%end%>
 
-<%= link_to @bug do %>
+<%= link_to "/projects/#{@bug.title}" do %>
   <div class="listing animated fadeInLeftBig">
     <h3 class="sliding-u-l-r-l"><%=@bug.title%></h3><br>
     <%= image_tag @bug.image.url,class:"listing_pic d-flex ml-3" %>
@@ -40,7 +42,7 @@
 <br>
 <% @projects.each do |project| %>
   <%if @counter.even?%>
-    <%= link_to project do %>
+    <%= link_to "/projects/#{project.title}" do %>
       <div class="listing animated fadeInLeftBig">
         <h3 class="sliding-u-l-r-l"><%=project.title%></h3><br>
         <%= image_tag project.image.url,class:"listing_pic d-flex ml-3" %>
@@ -48,7 +50,7 @@
       </div>
     <%end%>
   <%else%>
-    <%= link_to project do %>
+    <%= link_to "/projects/#{project.title}" do %>
       <div class="listing animated fadeInRightBig">
         <h3 class="sliding-u-l-r-l"><%=project.title%></h3><br>
         <%= image_tag project.image.url,class:"listing_pic d-flex ml-3" %>
