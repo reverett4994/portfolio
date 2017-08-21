@@ -25,6 +25,101 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ .blue {
+    background-color: #88CFEF !important;
+    color: white !important;
+    p{
+      color: white !important;
+    }
+    h3{
+      color: white !important;
+    }
+    *{
+      border-color: white !important;
+    }
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+ }
+
+ .usa {
+    background-color: #E0162B !important;
+    color: white !important;
+    p{
+      color: white !important;
+    }
+    h3{
+      color: white !important;
+    }
+    *{
+      border-color: #0052A5 !important;
+    }
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+ }
+
+ .orange {
+    background-color: #f26419 !important;
+    color: #0d2c54 !important;
+    p{
+      color: #0d2c54 !important;
+    }
+    h3{
+      color: #0d2c54 !important;
+    }
+    *{
+      border-color: #0d2c54 !important;
+    }
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+ }
+
+ .tan {
+    background-color: #ebd2be !important;
+    color: #2a0c4e !important;
+    p{
+      color: #2a0c4e !important;
+    }
+    h3{
+      color: #2a0c4e !important;
+    }
+    *{
+      border-color: #2a0c4e !important;
+    }
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+ }
+
+ .green {
+    background-color: #20bf55 !important;
+    color: #1f2421 !important;
+    p{
+      color: #1f2421 !important;
+    }
+    h3{
+      color: #1f2421 !important;
+    }
+    *{
+      border-color: #1f2421 !important;
+    }
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+ }
  /******************************************* HEADER ******************************************************/
 
  .navbar-nav {
@@ -46,7 +141,7 @@
     }
   }
 }
-/******************************************* HEADER ******************************************************/
+/******************************************* HEADER/FOOTER ******************************************************/
 
  * {
    margin: 0;
@@ -94,6 +189,76 @@
      opacity: 1;
    }
  }
+
+ #color_change {
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 2px 6px 2px 6px;
+  border-top: 2px solid #333333;
+  border-right: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+  border-left: 2px solid #333333;
+}
+#color_change:hover  {
+-webkit-animation:rainbow 1.5s infinite;
+-ms-animation:rainbow 1.5s infinite;
+-o-animation:rainbow 1.5s infinite;
+animation:rainbow 1.5s infinite;
+}
+@-webkit-keyframes rainbow {
+0% {border-color: #ff0000;}
+10% {border-color: #ff8000;}
+20% {border-color: #ffff00;}
+30% {border-color: #80ff00;}
+40% {border-color: #00ff00;}
+50% {border-color: #00ff80;}
+60% {border-color: #00ffff;}
+70% {border-color: #0080ff;}
+80% {border-color: #0000ff;}
+90% {border-color: #8000ff;}
+100% {border-color: #ff0080;}
+}
+@-ms-keyframes rainbow {
+0% {border-color: #ff0000;}
+10% {border-color: #ff8000;}
+20% {border-color: #ffff00;}
+30% {border-color: #80ff00;}
+40% {border-color: #00ff00;}
+50% {border-color: #00ff80;}
+60% {border-color: #00ffff;}
+70% {border-color: #0080ff;}
+80% {border-color: #0000ff;}
+90% {border-color: #8000ff;}
+100% {border-color: #ff0080;}
+}
+@-o-keyframes rainbow {
+0% {border-color: #ff0000;}
+10% {border-color: #ff8000;}
+20% {border-color: #ffff00;}
+30% {border-color: #80ff00;}
+40% {border-color: #00ff00;}
+50% {border-color: #00ff80;}
+60% {border-color: #00ffff;}
+70% {border-color: #0080ff;}
+80% {border-color: #0000ff;}
+90% {border-color: #8000ff;}
+100% {border-color: #ff0080;}
+}
+@keyframes rainbow {
+0% {border-color: #ff0000;}
+10% {border-color: #ff8000;}
+20% {border-color: #ffff00;}
+30% {border-color: #80ff00;}
+40% {border-color: #00ff00;}
+50% {border-color: #00ff80;}
+60% {border-color: #00ffff;}
+70% {border-color: #0080ff;}
+80% {border-color: #0000ff;}
+90% {border-color: #8000ff;}
+100% {border-color: #ff0080;}
+}
 
  /******************************************* HOME ******************************************************/
 
