@@ -27,13 +27,64 @@
 </body>
 </html>
 <script>
+  var style=localStorage.getItem("style")
+
+  switch (style) {
+  case "blue":
+      $("#color_change").text("Sky Blue!");
+      var counter = 0
+      $( "#wrapper" ).removeClass( "blue orange tan green usa" );
+      $( "#wrapper" ).addClass( "blue" );
+      localStorage.setItem("style", "blue");
+      break;
+  case "usa":
+      $("#color_change").text("USA");
+      var counter = 1
+      $( "#wrapper" ).removeClass( "blue orange tan green usa" );
+      $( "#wrapper" ).addClass( "usa" );
+      localStorage.setItem("style", "usa");
+      break;
+  case "orange":
+      $("#color_change").text("Broncos");
+      var counter = 2
+      $( "#wrapper" ).removeClass( "blue orange tan green usa" );
+      $( "#wrapper" ).addClass( "orange" );
+      localStorage.setItem("style", "orange");
+      break;
+  case "tan":
+      $("#color_change").text("Wheat");
+      var counter = 3
+      $( "#wrapper" ).removeClass( "blue orange tan green usa" );
+      $( "#wrapper" ).addClass( "tan" );
+      localStorage.setItem("style", "tan");
+      break;
+  case "green":
+      $("#color_change").text("Sea Weed");
+      var counter = 4
+      $( "#wrapper" ).removeClass( "blue orange tan green usa" );
+      $( "#wrapper" ).addClass( "green" );
+      break;
+  case "":
+      $("#color_change").text("Colorize!");
+      var counter = 5
+      $( "#wrapper" ).removeClass( "blue orange tan green usa" );
+      localStorage.setItem("style", "");
+  //case 6:
+  //    $(this).text("0");
+}
+
   $(".navbar-nav li").hover(function(){
     $(this).addClass("animated infinite jello");
     },function(){
       $(this).removeClass("animated infinite jello");
   })
+
+
   var styles=["blue","usa","orange","tan","green"];
-  var counter=-1
+  if ( counter == null){
+    var counter=-1
+  }
+  console.log(counter);
   $( "#color_change" ).click(function() {
     if (counter == 5){
       counter = -1;
@@ -45,21 +96,27 @@
     switch (counter) {
     case 0:
         $(this).text("Sky Blue!");
+        localStorage.setItem("style", "blue");
         break;
     case 1:
         $(this).text("USA!");
+        localStorage.setItem("style", "usa");
         break;
     case 2:
         $(this).text("Broncos");
+        localStorage.setItem("style", "orange");
         break;
     case 3:
         $(this).text("Wheat Fields");
+        localStorage.setItem("style", "tan");
         break;
     case 4:
         $(this).text("Sea Weed");
+        localStorage.setItem("style", "green");
         break;
     case 5:
         $(this).text("Colorize!");
+        localStorage.setItem("style", "");
     //case 6:
     //    $(this).text("0");
 }
